@@ -5,6 +5,7 @@ filetype plugin on
 colorscheme solarized
 
 
+
 "CUSTOM MAP
 noremap   <F3> :set invnumber<CR>
 inoremap  <F3> <C-O>:set invnumber<CR>                " switch number line
@@ -116,3 +117,19 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 
+
+
+"IMPORTED FUNCTIONS
+
+" Toggle Background
+
+
+function! BgToggleSol()
+    if (&background == "light")
+      set background=dark 
+    else
+       set background=light 
+    endif
+endfunction
+
+nnoremap <silent> <leader>sz :call BgToggleSol()<cr>
