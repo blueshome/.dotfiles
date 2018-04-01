@@ -1,5 +1,6 @@
 set complete+=kspell
 set conceallevel=2
+set syntax=markdown
 
 " Align GitHub-flavored Markdown tables
 au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
