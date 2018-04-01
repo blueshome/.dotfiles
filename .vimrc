@@ -40,6 +40,9 @@ set guioptions=                                     " gui gvim settings
 
 
 autocmd BufRead,BufNewFile *.md set filetype=Markdown
+autocmd Filetype tex setl updatetime=1
+let g:livepreview_previewer = 'open -a Preview'
+let vim_markdown_preview_github=1
 
 "VIM PLUG
 call plug#begin('~/.vim/plugged')
@@ -54,6 +57,7 @@ Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 "vim for writers
 Plug 'https://github.com/junegunn/goyo.vim'
@@ -65,6 +69,7 @@ Plug 'beloglazov/vim-online-thesaurus'
 Plug 'jonhiggs/MacDict.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'VVVFO/markdown-shortcuts.vim'
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 call plug#end()
 
@@ -126,10 +131,14 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 function! BgToggleSol()
     if (&background == "light")
-      set background=dark 
+      set background=dark
     else
-       set background=light 
+       set background=light
     endif
 endfunction
 
 nnoremap <silent> <leader>sz :call BgToggleSol()<cr>
+
+
+
+
