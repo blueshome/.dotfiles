@@ -5,8 +5,7 @@ set syntax=markdown
 " Align GitHub-flavored Markdown tables
 au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
-map <F5> :Goyo<cr>
-map <F6> :set invfu<CR>
+map <F6> :Goyo<cr>
 map <F7> :setlocal spell! spelllang=en_us<CR>
 map <F8> "dyiw:call MacDict(@d)<CR>
 

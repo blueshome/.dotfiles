@@ -11,7 +11,7 @@ noremap   <F3> :set invnumber<CR>
 inoremap  <F3> <C-O>:set invnumber<CR>                " switch number line
 noremap   <F4> :set invrelativenumber<CR>
 inoremap  <F4> <C-O>:set invrelativenumber<CR>        " switch relative number line
-nnoremap  <F5> :buffers<CR>:buffer<Space>             " print buffers list
+map       <F5> :set invfu<CR>                         " switch fullscreen
 nnoremap  <C-Tab> <C-w>w                              " switch windows
 nnoremap  <C-S-Tab> <C-w>W
 nnoremap  <C-Up> :tabnext<CR>                         " switch tabs
@@ -44,6 +44,7 @@ autocmd Filetype tex setl updatetime=1
 
 let g:livepreview_previewer = 'open -a Preview'
 let vim_markdown_preview_github=1
+let g:vimwiki_list = [{'path': '~/Google Drive/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki'}]
 
 "VIM PLUG
 call plug#begin('~/.vim/plugged')
@@ -72,7 +73,7 @@ Plug 'VVVFO/markdown-shortcuts.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'lervag/vimtex'
-
+Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 
 call plug#end()
 
