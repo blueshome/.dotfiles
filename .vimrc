@@ -16,7 +16,7 @@ nnoremap  <C-Tab> <C-w>w                              " switch windows
 nnoremap  <C-S-Tab> <C-w>W
 nnoremap  <C-Up> :tabnext<CR>                         " switch tabs
 nnoremap  <C-Down> :tabprevious<CR>
-nnoremap  <C-n> :NERDTreeToggle<CR>
+nmap      <C-p> :NERDTreeToggle<CR>
 
 
 "CUSTOM CONFIG
@@ -44,7 +44,7 @@ autocmd Filetype tex setl updatetime=1
 
 let g:livepreview_previewer = 'open -a Preview'
 let vim_markdown_preview_github=1
-let g:vimwiki_list = [{'path': '~/Google Drive/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki'}]
+let g:vimwiki_list = [{'path': '~/Google Drive/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
 "VIM PLUG
 call plug#begin('~/.vim/plugged')
