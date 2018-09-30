@@ -10,3 +10,6 @@ alias gv='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 
 source .bash_secrets
 
+export GOOGLE_API_KEY=""
+export GOOGLE_DEFAULT_CLIENT_ID=""
+export GOOGLE_DEFAULT_CLIENT_SECRET=""

@@ -71,10 +71,6 @@ Plug 'jonhiggs/MacDict.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'VVVFO/markdown-shortcuts.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-Plug 'lervag/vimtex'
-Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
-
 call plug#end()
 
 
